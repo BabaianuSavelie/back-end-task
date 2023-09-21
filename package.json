@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --enable-source-maps dist",
+    "dev": "nodemon ./src/index.ts",
     "compile": "shx rm -rf dist && tsc -p tsconfig.json",
     "start:slow": "npm run compile && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,17 +18,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
     "express": "^4.17.2",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.7.1",
     "sequelize": "^6.12.0",
-    "tslib": "^2.3.1"
+    "tslib": "^2.3.1",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "eslint": "^8.5.0",
+    "nodemon": "^3.0.1",
     "shx": "^0.3.3",
+    "ts-node": "^10.9.1",
     "typescript": "^4.5.4"
   }
 }
